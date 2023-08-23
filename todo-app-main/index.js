@@ -48,7 +48,14 @@ image.addEventListener('click', () => {
 
 
 
+const loginForm = document.getElementById("loginForm");
+const mainSite = document.getElementById("mainSite");
+const loginButton = document.getElementById("loginButton");
 
+loginButton.addEventListener("click", () => {
+    loginForm.style.display = "none";
+    mainSite.style.display = "block";
+});
 
 
 
