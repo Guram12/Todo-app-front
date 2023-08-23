@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+    <div id="loginForm">
+        <h2>Login Form</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="button" id="loginButton">Login</button>
+        </form>
+    </div>
+    
+    <div id="mainSite" style="display: none;">
+        <h2>Main Site</h2>
+        <!-- Main site content goes here -->
+    </div>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const mainSite = document.getElementById("mainSite");
+        const loginButton = document.getElementById("loginButton");
+
+        loginButton.addEventListener("click", () => {
+            loginForm.style.display = "none";
+            mainSite.style.display = "block";
+        });
+    </script>
+</body>
+</html>
