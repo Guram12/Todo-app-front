@@ -335,3 +335,8 @@ li:hover img {
   }
   
   
+
+  /* login form styles */
+  #authForm {
+    display: none;
+  }

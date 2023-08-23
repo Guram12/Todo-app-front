@@ -50,24 +50,45 @@ image.addEventListener('click', () => {
 
 const loginForm = document.getElementById("loginForm");
 const mainSite = document.getElementById("mainSite");
-const loginButton = document.getElementById("loginButton");
+const auth_button = document.getElementById("authButton"); 
+const auth_form = document.getElementById("authForm");
 
-loginButton.addEventListener("click", () => {
+// Event listener for switching to the authentication form
+auth_button.addEventListener("click", () => {
     loginForm.style.display = "none";
-    mainSite.style.display = "block";
+    auth_form.style.display = "block"; // Display the authentication form
+    mainSite.style.display = "none";
 });
 
+// Event listener for going back to the login form from the authentication form
+const loginButton1 = document.getElementById("go_to_login");
+loginButton1.addEventListener("click", () => {
+    loginForm.style.display = "block"; // Display the login form
+    auth_form.style.display = "none";
+    mainSite.style.display = "none";
+});
+
+// Event listener for switching to the main site
+const loginButton = document.getElementById("loginButton");
+loginButton.addEventListener("click", async () => {
+    const username = document.getElementById("username").value; // Get the username input value
+    const password = document.getElementById("password").value; // Get the password input value
+
+    // Assuming you're making a POST request to create a user
+    await fetch("http://127.0.0.1:8000/users/", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            username: username,
+            password: password,
+        }),
+    });
 
 
-
-
-
-
-
-
-
-
-
+    loginForm.style.display = "none";
+    auth_form.style.display = "none"; // Hide the authentication form
+    mainSite.style.display = "block";
+});
 
 
 
