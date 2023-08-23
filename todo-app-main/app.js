@@ -23,10 +23,9 @@ addTaskbutton.addEventListener('click' , async function(e){
             category_id : [formdata.get("category_id")]
         }
         ]
-
-        const task = taskarray[0]
-
-        await createTask(task);
+        
+        // const task = taskarray[0]
+        await createTask(taskarray);
         fetchTasks();
         addTaskForm.reset();
     }
@@ -194,8 +193,6 @@ clear_complited.addEventListener("click" , async function() {
     const data = await fetchFalseTasks();
     const false_tasks = data.results;
     const size = data.total_pages*data.page_size
-
-    console.log(false_tasks)
     const fetch_all_Tasks = fetchAllTasks(size)
 
     let taskListRenderString = ""
