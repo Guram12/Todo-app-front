@@ -19,13 +19,12 @@ addTaskbutton.addEventListener('click' , async function(e){
         const taskarray = [ {
             title: formdata.get('title'),
             description: formdata.get("description"),
-            author_id : formdata.get("author_id"),
+            user : formdata.get("author_id"),
             category_id : [formdata.get("category_id")]
         }
         ]
-        
-        // const task = taskarray[0]
-        await createTask(taskarray);
+        const task = taskarray[0]
+        await createTask(task);
         fetchTasks();
         addTaskForm.reset();
     }

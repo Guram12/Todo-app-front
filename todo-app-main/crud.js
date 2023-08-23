@@ -9,7 +9,7 @@ async function fetchTasks(page = 1) {
     const response = await fetch(`${BASE_URL}?page=${page}`);
     const data = await response.json();
     const tasks = data.results;
-    console.log(tasks)
+
     let taskListRenderString = '';
     for (let task of tasks) {
         taskListRenderString = taskListRenderString + renderTaskTamplate(task);
