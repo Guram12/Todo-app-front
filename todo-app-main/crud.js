@@ -6,10 +6,14 @@ const tasklist = document.querySelector('.tasklist');
 //function for get all tasks from server
 
 async function fetchTasks(page = 1) {
-    const response = await fetch(`${BASE_URL}?page=${page}`);
+    const response = await fetch(`${BASE_URL}?page=${page}`, {
+        method: "GET",
+        headers: {
+            "Authorization" : `Token ${localStorage.getItem('token')}`
+        },
+    });
     const data = await response.json();
     const tasks = data.results;
-
     let taskListRenderString = '';
     for (let task of tasks) {
         taskListRenderString = taskListRenderString + renderTaskTamplate(task);
@@ -35,7 +39,8 @@ async function createTask(task){
         const response = await fetch(BASE_URL , {
             method: "POST",
             headers: {
-                "Content-type": "application/json", 
+                "Content-type": "application/json",
+                "Authorizahion" : `Token ${localStorage.getItem('token')}`
             },
             body : JSON.stringify(task)
         });
