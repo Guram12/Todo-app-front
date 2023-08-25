@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -297,8 +299,22 @@ li:hover img {
 }
 
 
+.user_name {
+    display: flex;
+    margin-bottom: 20px;
+    position: absolute;
+    font-family: 'Anton', sans-serif;
+    font-size: 17px;
+    color: whitesmoke;
+    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
+}
 
-
+#user_icon {
+    width: 34px;
+    height: 34px;
+}
 
 
 
@@ -336,7 +352,120 @@ li:hover img {
   
   
 
-  /* login form styles */
+  /* login form styles --------------------------*/
   #authForm {
     display: none;
   }
+
+
+  #loginForm {
+    background-image: linear-gradient(rgba(85, 221 , 255, 1), rgba(192, 88, 243,1 ));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+}
+
+#loginForm h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#loginForm label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#loginButton,
+#authButton {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginButton:hover,
+#authButton:hover {
+    background-color: #2980b9;
+}
+
+#loginButton {
+    margin-right: 10px;
+}
+
+#authButton {
+    background-color: #2ecc71;
+}
+
+#authButton:hover {
+    background-color: #27ae60;
+}
+
+
+
+/* register form styles ----------------------------------------- */
+
+#authForm {
+    background-image: linear-gradient(rgba(85, 221 , 255, 1), rgba(192, 88, 243,1 ));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+}
+
+#authForm h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#authForm label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#authForm input[type="text"],
+#authForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#go_to_login {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#go_to_login:hover {
+    background-color: #2980b9;
+}

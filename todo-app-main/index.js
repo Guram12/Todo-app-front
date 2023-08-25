@@ -111,9 +111,7 @@ loginButton.addEventListener("click", async () => {
 
         if (response.ok) {
             let data = await response.json();
-
-            localStorage.setItem("token", data.access); // Set a simple test value
-
+            localStorage.setItem("token", data.token); // Set a simple test value
             loginForm.style.display = "none";
             auth_form.style.display = "none";
             mainSite.style.display = "block";
@@ -126,3 +124,32 @@ loginButton.addEventListener("click", async () => {
     
 });
 
+
+
+//retrive user information 
+
+loginButton.addEventListener("click", async () => {
+    try {
+        if (localStorage.getItem('token')) {
+            const response = await fetch("http://127.0.0.1:8000/users/me", {
+                method: "GET",
+                headers: {
+                    "Content-type": "application/json",
+                    "Authorization": `Token ${localStorage.getItem('token')}`
+                },
+            });
+            if (response.ok) {
+                const json = await response.json();
+                const user_name = json.username
+                const corrent_user = document.getElementById('user_info')
+                corrent_user.textContent = user_name
+            } else {
+                console.error("Failed to retrieve user information.");
+            }
+        } else {
+            console.error("Token not found in localStorage.");
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
+});
