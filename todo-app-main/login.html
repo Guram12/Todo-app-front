@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Frontend Mentor | Todo app</title>
-
 </head>
-<!-- login form -->
 <body>
     <div id="loginForm">
         <h2>Login Form</h2>
@@ -27,133 +18,6 @@
             <button type="button" id="authButton">Sign up</button>
         </form>
     </div>
-<!-- ----------------- -->
 
-<!-- authentication form -->
-
-    <div id="authForm">
-      <h2 >Login Form</h2>
-      <form>
-          <label for="email">email:</label>
-          <input type="text" id="email" name="email"><br><br>
-          <label for="username">Username:</label>
-          <input type="text" id="username1" name="username"><br><br>
-          <label for="password">Password:</label>
-          <input type="password" id="password1" name="password"><br><br>
-          <button type="button" id="go_to_login">Register and Go To Login</button>
-      </form>
-      <p id="load" ></p>
-  </div>
-
-  
-<!-- -------------- -->
-  <div id="mainSite" style="display: none;">
-    <div class="user_name" >
-       <p id="user_info"></p>
-       <img id="user_icon" src="./images/258859382_931028447795686_3041655398973367940_n.png"  >
-     </div>
-        <div class="background"></div>
-        <div class="first">
-          
-            <div class="todo">
-              
-              <h2 CLASS="HOME">TODO</h2>
-              <img class="moon" src="./images/icon-moon.svg">
-            </div>
-            <!-- first input form -->
-            <form action="" method="post" id="add-task-form">
-              <input id="task__id" type="hidden" name="task-id" value="" >
-              <div class="create_todo dark "> 
-                <div class="checkbox_item">
-                  <input class="checkbox1" type="checkbox">
-                  <div class="input_div" >  </div>
-                </div>
-                <div class="twodiv">
-                  <input id="inputText" name='title'  class="input_text inputTitl dark" type="text" placeholder="Create a new todo..">
-                  
-                </div>
-                <div class="two_button"> 
-                  <button id="add_task" type="submit" data-action="add">Add</button>
-                  <button id="update_task" type="submit" data-action="update" >Update</button>
-                
-                </div>
-              </div>
-              <div class="create_todo dark "> 
-                <div class="checkbox_item none">
-                  
-                  
-                </div>
-                <div class="twodiv">
-                  <input id="inputText1" name="description" class="input_text inputTitl dark" type="text" placeholder="Add description..">
-                  
-                </div>
-                
-              </div>
-              <!-- authot -->
-              <div class="create_todo dark authod_category"> 
-                <div class="checkbox_item none">
-                  
-                  
-                </div>
-                <div class="twodiv">
-                  <input id="inputText2" name="author_id" class="input_text inputTitl dark" type="text" placeholder="Author's username..">
-                  
-                </div>
-                
-              </div>
-              <!-- ----- -->
-    
-              <!-- Category -->
-              <div class="create_todo dark authod_category"> 
-                <div class="checkbox_item none">
-                  
-                  
-                </div>
-                <div class="twodiv">
-                  <input id="inputText3" name="category_id" class="input_text inputTitl dark" type="text" placeholder="Choose category..">
-                  
-                </div>
-                
-              </div>
-              <!-- ----- -->
-            </form>
-            <div class="todo_list dark">
-                <ul class="tasklist">
-                </ul>
-    
-              <div class="ul_footer">
-                <p class="left dark">5 times left</p>
-                <div class="active_text">
-                  <h4 class="all">All</h4>
-                  <h4>Active</h4>
-                  <h4>Complited</h4>
-                </div>
-                <p class="left dark  clear_complited">Clear complated</p>
-              </div>
-              <div class="mobile_footer dark">
-                <div class="mobile_flex">
-                  <h4 class="all">All</h4>
-                  <h4>Active</h4>
-                  <h4>Complited</h4>
-                </div>
-              </div>
-              
-            </div>
-            <div class="create_todo dark darkelement pagination_buttons">
-              <button class="previous pg" data-action="previous" >previous</button>
-              <button class="next pg"  data-action="next">next</button>
-            </div>
-            
-        </div>
-        <script src="./index.js"></script>
-        <script src='./crud.js'></script>
-        <script src="./app.js"></script>
-        <script src="./utils.js"></script>
-        
-    </div>
-
-    <script>
-        // JavaScript code here
-    </script>
 </body>
 </html>

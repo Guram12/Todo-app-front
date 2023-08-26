@@ -49,7 +49,6 @@ image.addEventListener('click', () => {
 
 
 
-
 const loginForm = document.getElementById("loginForm");
 const mainSite = document.getElementById("mainSite");
 const auth_button = document.getElementById("authButton"); 
@@ -114,9 +113,7 @@ loginButton.addEventListener("click", async () => {
         if (response.ok) {
             let data = await response.json();
             localStorage.setItem("token", data.token); 
-            loginForm.style.display = "none";
-            auth_form.style.display = "none"; // Hide the authentication form
-            mainSite.style.display = "block";
+            window.location.assign('index.html')
         } else {
             console.error("Login failed");
         }
@@ -187,6 +184,3 @@ loginButton.addEventListener("click", async () => {
 //         console.error('An error occurred:', error);
 //     }
 // });
-
-
-
