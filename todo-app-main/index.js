@@ -153,3 +153,18 @@ loginButton.addEventListener("click", async () => {
         console.error("An error occurred:", error);
     }
 });
+
+
+
+// // logging out and deltting the token
+const logOutButton = document.getElementById('log-out-button');
+
+logOutButton.addEventListener('click', () => {
+    // Clear the token from local storage
+    localStorage.removeItem('token');
+    console.log('Logged out successfully');
+    // Redirect to login page if needed
+    loginForm.style.display = "block";
+    auth_form.style.display = "none"; // Hide the authentication form
+    mainSite.style.display = "none";
+});
